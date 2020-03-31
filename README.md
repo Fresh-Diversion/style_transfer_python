@@ -1,1 +1,1 @@
-# style_transfer_python
+# neural_style_transfer_python
