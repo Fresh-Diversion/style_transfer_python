@@ -44,6 +44,10 @@ modelIter = itertools.cycle(models)
 print("[INFO] loading style transfer model...")
 net = cv2.dnn.readNetFromTorch(modelPath)
 
+# to use GPU, uncomment both two lines below.
+#net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+#net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+
 # initialize the video stream, then allow the camera sensor to warm up
 print("[INFO] starting video stream...")
 vs = VideoStream(src=0).start()
